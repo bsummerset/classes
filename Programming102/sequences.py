@@ -4,7 +4,7 @@
 
 things_around_me = ["computer", "guitar", "lamp", "desk"]
 
-# index = 0
+# index = 1
 # for y in things_around_me:
 #      for x in range(index):
 #          print("%s: %s" % (index, things_around_me))
@@ -16,3 +16,7 @@ print(things_around_me[1])
 print(things_around_me[2])
 print(things_around_me[3])
     
+
+i = (input("What do you like? 0-3"))
+if i == 0:
+    print()
