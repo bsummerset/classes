@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div {
+            display: flex;
+            width: 450px;
+            
+        }
+
+        .button, input {
+            padding: 5px;
+            border-radius: 0;
+            border: 1px solid black;
+            font-size: 15px;
+        }
+
+        .input {
+            flex: 2;
+        }
+    </style>
+</head>
+<body>
+        <label for="input">Name</label>
+    <div>
+        <input placeholder="Enter Your name" id="input-item" name="name" />
+        <button>Submit</button>
+    </div>
+    <label>Price</label>
+    <div>
+        <button>$</button>
+        <input placeholder="Enter The Price" id="input-item" name="label" />
+        <button>Submit again</button>
+    </div>
+    <label>Handle</label>
+    <div>
+        <button>@</button>
+        <input placeholder="Enter the Handle" id="input-item" name="handle">
+        <button>Search</button>
+    </div>
+</body>
+</html>
