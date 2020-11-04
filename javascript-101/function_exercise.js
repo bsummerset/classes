@@ -1,15 +1,14 @@
 // #1
-function myFunction(one = 1, two = 2, three = 3) {
+const myFunction = function(one,  two , three ) {
     return one + two + three
 }
-console.log(myFunction)
+let res = myFunction("I", "am", 1)
+console.log(res)
 
 // #2
-const thisThing = function(single){
-    console.log("This is confussing")
 
-}
 
+// #3
 function newFunction(noOneKnows, number){
     let i = 0
     while (i <= number){
@@ -27,5 +26,3 @@ newFunction(function(){
 } , 25)
 
 
-
-// #3

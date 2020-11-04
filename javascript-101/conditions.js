@@ -22,8 +22,6 @@ if (value > 100){
 
 let num = 20;
 newNum = Math.floor(Math.random() * 150) == newNum == num ? yes : "Try Again!"
-
-
 console.log(newNum)
 
 

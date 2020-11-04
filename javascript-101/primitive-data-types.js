@@ -4,8 +4,3 @@
 
 // let myTemplate = `${a} is great ${b} is better`)
 
-// var name = "Brian"
-// console.log(name);
-
-let name = "Brian"
-console.log(name)
