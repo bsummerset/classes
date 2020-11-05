@@ -43,6 +43,12 @@
 
 
 
-let header = document.querySelector("h1")
-header.style = "border: 2px solid black"
-header.style = "color: red;"
+// let header = document.querySelector("h1")
+// header.style = "border: 2px solid black"
+// header.style = "color: red;"
+
+const para = document.getElementsByClassName(text);
+
+// console.log(para.innerText);
+
+para.innerText = "new text"
