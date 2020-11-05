@@ -30,40 +30,40 @@
 
 // });
 
-// const error = document.querySelector(".error");
-// // console.log(error.innerHTML);
+//  const error = document.querySelector(".error");
+//  console.log(error.innerHTML);
 
-// //error.innerHTML += "<h2>This is a new H2</h2>"
+// error.innerHTML += "<h2>This is a new H2</h2>"
 
-// // const people = ['mario', 'luigi','yoshi'];
-// // people.forEach(person => {
-// //     error.innerHTML += `<p>${person}</p>`
-// // });
+// const people = ['mario', 'luigi','yoshi'];
+// people.forEach(person => {
+//     error.innerHTML += `<p>${person}</p>`
+//  });
 
-// // const link = document.querySelector('a')  //selecting an attribute
+ const link = document.querySelector('a')  //selecting an attribute
 
-// // console.log(link.getAttribute("href"));                 //change an attribute to something else and it update in the browser
-// // link.setAttribute("href", "https://www.digitalcrafts.com");
-// // link.innerText = "The Digital Crafts website";
+console.log(link.getAttribute("href"));                 //change an attribute to something else and it update in the browser
+link.setAttribute("href", "https://www.digitalcrafts.com");
+link.innerText = "The Digital Crafts website";
 
 
-// // const msg = document.querySelector("p") //grabbing the <p> tag
-// // console.log(msg.getAttribute("class"));
-// // msg.setAttribute("class", "success"); //change the style of element
+const msg = document.querySelector("p") //grabbing the <p> tag
+console.log(msg.getAttribute("class"));
+msg.setAttribute("class", "success"); //change the style of element
 
 // // //adding on attrubute that does not already exist
 
-// // msg.setAttribute("style", "color:green;");
+msg.setAttribute("style", "color:green;");
 
-// const title = document.querySelector("h1");
-// //title.setAttribute("style", "margin: 50px;"); change the style of attribute h1
-// console.log(title.style); //using style property. property of this element
-// console.log(title.style.color);// get the style color property of the title element
+const title = document.querySelector("h1");
+title.setAttribute("style", "margin: 50px;"); //change the style of attribute h1
+console.log(title.style); //using style property. property of this element
+console.log(title.style.color);// get the style color property of the title element
 
 // //add styles
-// title.style.margin = "50px";
-// title.style.color = "crimson";
-// title.style.fontSize = "60px";
+title.style.margin = "50px";
+title.style.color = "crimson";
+title.style.fontSize = "60px";
 
 // //delete style removing single style
 // title.style.margin = "";
@@ -91,6 +91,6 @@ paras.forEach(p => {                // for each paragraph, going to pass this in
 });
 
 //how to toggle classes. if an element has a class we want to take it off, if an element doesn't have a class we want to apply it.
-const title = document.querySelector(".title"); //from the class title
+const newTitle = document.querySelector(".title"); //from the class title
 title.classList.toggle("test"); // if the element does't have a class of test, it will give it one
 title.classList.toggle("test");// run it again and if it does have a class of test, this will remove it
