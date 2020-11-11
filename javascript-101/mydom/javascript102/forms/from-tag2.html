@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form-Tag</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+
+    <form id="register">
+        <label for="firstname">First Name</label>
+        <input type="text" id="first-name" name="firstname" placeholder="first name" required>
+        <br><br>
+        <label for="lastname">Last Name</label>
+        <input type="text" id="last-name" name="lastname" placeholder="last name"required>
+        <br><br>
+        <label for="username">Create a Username</label>
+        <input type="text"id="username" name="username" placeholder="username"required>
+        <br><br>
+        <label for="password">Create a password</label>
+        <input type="password" id="password" name="password" placeholder="password"required>
+        <br><br>
+        <label for="email">Create an email</label>
+        <input type="email" id="email" name="email" placeholder="email">
+        <br><br>
+
+        <label for="comments">Comments:</label><br>
+        <textarea name="comments" id="bio" cols="30" rows="10" placeholder="Any specific comments"></textarea>
+        
+        <br><br>
+
+        <label for="checkbox">Agree to terms?</label>
+        <input type="checkbox", id="agree", name="checkbox" required>
+
+        <br><br>
+
+        <button>submit</button>
+    </form>
+    <script>
+        let registerForm = document.querySelector("#register")
+        registerForm.addEventListener("submit",(evt)=>{
+            evt.preventDefault()            
+            let results = [...evt.target.elements]
+                .filter(el=>el.name)
+                .map(el=>({name:el.name, value:el.value}))
+            let d = document.createElement("div")
+            d.append(results[0].name, ":", results[0].value, "  ")
+            d.append(results[1].name, ":", results[1].value)
+            document.body.append(d)
+        })
+    </script>
+</body>
+</html>
