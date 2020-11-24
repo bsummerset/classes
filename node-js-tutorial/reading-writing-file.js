@@ -3,7 +3,7 @@
 //set variable name equal to module name
 
 
-// let fs = require('fs');
+let fs = require('fs');
 
 
 //Syncronous method
@@ -12,20 +12,20 @@
 //second parameter is the character in coding
 //fs module has gone out and read the readMe file syncronously and used the utf8 in coding to store the file contents in the readMe variable and log that to the console.
 
-// let readMe = fs.readFileSync('readMe.txt', 'utf8');
-// console.log(readMe);
+let readMe = fs.readFileSync('readMe.txt', 'utf8');
+console.log(readMe);
 
 //Write a file
 //read the file, store in variable, then take the contents of that variable and write it to a new file.
 // writing file syncronously
 
-// let readMe = fs.readFileSync('readMe.txt', 'utf8');
+let readMe = fs.readFileSync('readMe.txt', 'utf8');
 
 //first parameter is where we want the file written to
 //second parameter is the data that we want to write to the file
 
 //new file named writeMe.txt is created
-// fs.writeFileSync('writeMe.txt', readMe);
+fs.writeFileSync('writeMe.txt', readMe);
 
 
 //now reading and writing files asyncronously
@@ -35,19 +35,19 @@ let fs = require('fs');
 
 //reading the file, then firing the function. Once it's read the file and we're passing the data that it has read to the function that is logged to the console.
 
-// fs.readFile('readMe.txt', 'utf8', function(err, data){
-//     console.log(data);
+fs.readFile('readMe.txt', 'utf8', function(err, data){
+    console.log(data);
     
 
 // });
 //not blocking the remaining code. If it is additional code it will continue to run while it's reading the data
 
-// console.log('test');
+console.log('test');
 
 //writing file asyncronously
 
-// let fs = require('fs');
+let fs = require('fs');
 
-// fs.readFile('readMe.txt', 'utf8', function(err,data){
-//     fs.writeFile('writeMe.txt', data);
-// });
+fs.readFile('readMe.txt', 'utf8', function(err,data){
+    fs.writeFile('writeMe.txt', data);
+});

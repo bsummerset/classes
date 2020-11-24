@@ -1,0 +1,1 @@
+const CoolFunction = require("./coolFunction")
