@@ -68,11 +68,6 @@ const app = express();
 const server = http.createServer(app)
 const port = 4432
 
-app.get("/", (req,res, next)=>{
-    res.send("<h1>Home</h1>")
-    console.log(req.newTime)
-
-})
 
 const currentTime = (req, res, next)=>{
     let newTime = new Date()
@@ -82,13 +77,44 @@ const currentTime = (req, res, next)=>{
     next()
 }
 
-app.get("/api", currentTime, (req,res)=>{
+// const timeLogger = (req,res,next)=>{
+//     console.log(new Date())
+//     next()
+// }
+
+
+app.get("/", currentTime,(req,res)=>{
+    res.send("<h1>Home</h1>")
     console.log(req.newTime)
 
 })
-const timeLogger = (req,res,next)=>{
-    console.log(new Date())
-    next
+
+app.get("/api", currentTime, (req,res,next)=>{
+    res.send('<div>This is an API Page</div>')
+    console.log(req.newTime)
+    next()
+
+})
+const myObj = {people:[], places:[], things:[]};
+
+const checkType = (req, res, next)=>{
+    if(req.params.myObj === typeof{}) {return res.send("Continue")
+    next() 
+    }else{
+      return("Done")  
+    }
+    
 }
+
+app.get("/api/:type", checkType,(req,res)=>{
+    console.log("This is the end of request")
+    res.send("The type is an Object")
+})
+
+
+
+
+
+
 
 server.listen(port, ()=>console.log(`listening on port ${port}`))
